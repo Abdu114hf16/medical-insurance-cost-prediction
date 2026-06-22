@@ -7,9 +7,9 @@ transparent. The project follows the **CRISP-DM** methodology end to end.
 ## Motivation
 
 Insurers need to price premiums that cover expected medical costs without overcharging
-customers, but a price is only useful if it can be *explained* — to the customer who pays
-it and to the regulator who reviews it. This project tackles both sides: predict annual
-cost accurately, and attribute each prediction back to the attributes that drove it.
+customers, but a price is only useful if it can be *explained*, both to the customer who
+pays it and to the regulator who reviews it. This project tackles both sides: predict
+annual cost accurately, and attribute each prediction back to the attributes that drove it.
 
 The work answers a small set of business questions:
 
@@ -31,7 +31,7 @@ Key findings:
 
 - The **smoker-by-BMI interaction** is the single most valuable feature; adding it lifts
   the linear model from R² 0.81 to **0.91**, clearing the 0.80 target.
-- **Smoking combined with high BMI** dominates cost, followed by age — confirmed by both
+- **Smoking combined with high BMI** dominates cost, followed by age, confirmed by both
   the statsmodels OLS coefficients and the SHAP values.
 - A transparent **linear model beats a Random Forest** here (0.91 vs 0.88), so we keep the
   model that is both accurate and explainable.
@@ -58,13 +58,14 @@ evaluation and SHAP explanations, and saves `medical_cost_model.joblib`.
 
 ## Libraries used
 
-- **pandas**, **NumPy** — data handling
-- **scikit-learn** — modeling (LinearRegression, Ridge, Lasso, RandomForest) and metrics
-- **statsmodels** — OLS inference (coefficients, p-values, confidence intervals)
-- **SHAP** — per-prediction explainability
-- **matplotlib**, **seaborn** — visualization
+- **pandas**, **NumPy**: data handling
+- **scikit-learn**: modeling (LinearRegression, Ridge, Lasso, RandomForest) and metrics
+- **statsmodels**: OLS inference (coefficients, p-values, confidence intervals)
+- **SHAP**: per-prediction explainability
+- **matplotlib**, **seaborn**: visualization
 
 ## Acknowledgements
 
+- Course: the **Udacity Data Scientist Nanodegree**, which shaped the project structure and the CRISP-DM write-up.
 - Dataset: the public **Medical Cost Personal** dataset (commonly distributed on Kaggle).
 - Methodology: the **CRISP-DM** process framework.
