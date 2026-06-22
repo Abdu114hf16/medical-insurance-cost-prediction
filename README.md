@@ -66,6 +66,6 @@ evaluation and SHAP explanations, and saves `medical_cost_model.joblib`.
 
 ## Acknowledgements
 
-- Course: the **Udacity Data Scientist Nanodegree**, which shaped the project structure and the CRISP-DM write-up.
+- My special thanks to **Udacity** for providing the sufficient knowledge to implement this project through **Data Scientist Nanodegree**.
 - Dataset: the public **Medical Cost Personal** dataset (commonly distributed on Kaggle).
 - Methodology: the **CRISP-DM** process framework.
