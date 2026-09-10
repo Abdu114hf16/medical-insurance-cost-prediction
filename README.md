@@ -69,3 +69,38 @@ evaluation and SHAP explanations, and saves `medical_cost_model.joblib`.
 - My special thanks to **Udacity** for providing the sufficient knowledge to implement this project through **Data Scientist Nanodegree**.
 - Dataset: the public **Medical Cost Personal** dataset (commonly distributed on Kaggle).
 - Methodology: the **CRISP-DM** process framework.
+
+## Data source
+
+The public **Medical Cost Personal** dataset, 1,338 records across 7 columns,
+included here as `data/insurance.csv`. It is a teaching dataset, not an
+insurer's book of business.
+
+## Reproducibility
+
+`requirements.txt` pins the dependencies. The notebook runs top to bottom and
+is deterministic: the train/test split is seeded, so the R2 and RMSE figures in
+the table above reproduce exactly. Every metric quoted is a **holdout** result,
+measured on records the model never trained on.
+
+## Limitations
+
+- 1,338 records with six attributes. Far smaller and simpler than a real
+  pricing dataset, and results will not transfer to one unchanged.
+- Every relationship here is an **association within a pricing dataset**. None
+  of it establishes a medical cause and it should not be described as one.
+- No health history, occupation, claims behaviour or geography beyond a coarse
+  region, all of which a real pricing model would need.
+- **Educational use only.** This must not be used to set a premium, assess an
+  individual, or support a decision to grant or deny coverage.
+
+## Case study
+
+A full write-up: the business question, the method, the evidence, and what the
+result does not support.
+
+<https://alshammari.dev/projects/medical-cost-prediction/>
+
+## License
+
+MIT. See [LICENSE](LICENSE).
